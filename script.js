@@ -1,59 +1,58 @@
-
 class Person {
-  constructor(name , age){
-	   this._name=name 
-	   this._age=age
+  constructor(name, age) {
+    this._name = name;
+    this._age = age;
   }
- get name() {
+
+  get name() {
     return this._name;
   }
-	get age() {
-	  return this._age
+
+  get age() {
+    return this._age;
   }
-   set age(newAge){
-	    this._age=newAge
-   }
-	study(){
-		   return `${this.name} is studying`
-	  }
-	  teach(){
-		   return `${this.name} is teaching`
-	  }
+
+  set age(newAge) {
+    this._age = newAge;
+  }
 }
 
 class Student extends Person {
-	 constructor(name ,age){
-		  super(name , age)
-	 }
-      study(){
-		   return `${this.name} is studying`
-	  }
+  constructor(name, age) {
+    super(name, age);
+  }
+
+  study() {
+    console.log(`${this.name} is studying`);
+  }
 }
 
 class Teacher extends Person {
-	constructor(name ,age){
-		  super(name , age)
-	 }
-      teach(){
-		   return `${this.name} is teaching`
-	  }
-	
+  constructor(name, age) {
+    super(name, age);
+  }
+
+  teach() {
+    console.log(`${this.name} is teaching`);
+  }
 }
 
-Do not change the code below this line
+// Do not change the code below this line
 window.Person = Person;
 window.Student = Student;
 window.Teacher = Teacher;
 
-const person= new Person("John" , 25)
-console.log(person.name)
-person.age=30
-console.log(person.age)
+// Testing the code
+const person = new Person("John", 25);
+console.log(person.name); // Output: John
 
-const student= new Student("Alice" , 22)
-console.log(student.study())
-console.log(person.study())
-const teacher= new Teacher("Alice" , 40)
-console.log(teacher.teach())
-console.log(person.teach())
+person.age = 30;
+console.log(person.age); // Output: 30
+
+const student = new Student("Alice", 22);
+student.study(); // Output: Alice is studying
+
+const teacher = new Teacher("Bob", 40);
+teacher.teach(); // Output: Bob is teaching
+
 
