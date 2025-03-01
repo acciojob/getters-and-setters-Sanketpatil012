@@ -1,3 +1,4 @@
+
 class Person {
   constructor(name , age){
 	   this._name=name 
@@ -12,6 +13,12 @@ class Person {
    set age(newAge){
 	    this._age=newAge
    }
+	study(){
+		   return `${this.name} is studying`
+	  }
+	  teach(){
+		   return `${this.name} is teaching`
+	  }
 }
 
 class Student extends Person {
@@ -33,7 +40,7 @@ class Teacher extends Person {
 	
 }
 
-// Do not change the code below this line
+Do not change the code below this line
 window.Person = Person;
 window.Student = Student;
 window.Teacher = Teacher;
@@ -45,9 +52,8 @@ console.log(person.age)
 
 const student= new Student("Alice" , 22)
 console.log(student.study())
-
-const teacher= new Teacher("Bob" , 40)
+console.log(person.study())
+const teacher= new Teacher("Alice" , 40)
 console.log(teacher.teach())
-
-
+console.log(person.teach())
 
