@@ -11,12 +11,12 @@ class Person {
 	  return this._age
   }
    set age(newAge){
-	    return this._age=newAge
+	    this._age=newAge
    }
 }
 
 class Student extends Person {
-	 constuctor(name ,age){
+	 constructor(name ,age){
 		  super(name , age)
 	 }
       study(){
@@ -25,7 +25,7 @@ class Student extends Person {
 }
 
 class Teacher extends Person {
-	constuctor(name ,age){
+	constructor(name ,age){
 		  super(name , age)
 	 }
       teach(){
@@ -44,11 +44,11 @@ console.log(person.name)
 person.age="30"
 console.log(person.age)
 
- const student= new Student("John" , 30)
-student.study()
+const student= new Student("John" , 30)
+console.log(student.study())
 
- const teacher= new Teacher("John" , 30)
-student.teach()
+const teacher= new Teacher("John" , 30)
+console.log(teacher.teach())
 
 
 
